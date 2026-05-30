@@ -1,0 +1,32 @@
+/* Sarlavha ichidagi a (link) tegi uchun jonli ranglar */
+header h1 a {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-block;
+
+    /* Jonli ranglar kombinatsiyasi */
+    background: linear-gradient(
+        45deg,
+        #ff007f, #ff5500, #ffaa00,
+        #00ffaa, #00aaff, #0055ff, #7f00ff, #ff007f
+    );
+    background-size: 400% 400%;
+
+    /* Rangni matn ichiga joylash va eski rangni shaffof qilish */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Animatsiya tezligi (6 soniya) */
+    animation: suzuvchiRanglar 6s ease infinite;
+}
+
+/* Animatsiya harakati */
+@keyframes suzuvchiRanglar {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
